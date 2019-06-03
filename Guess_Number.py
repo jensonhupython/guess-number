@@ -7,10 +7,13 @@
 
 # Refine version 1
 # 每猜一次就告訴 User 目前現在猜第幾次
+# Refine version 2
+# User 可以決定隨機數字的範圍
 
 import random
-
-r = random.randint(1,100)
+start = int(input('請決定隨機範圍數字的起始值:'))
+end = int(input('請決定隨機範圍數字的結束值:'))
+r = random.randint(start, end)
 #print(r)
 count = 0
 user_guess = 0

@@ -5,18 +5,22 @@
 # 猜對的話 印出 "您終於猜對了"
 # 猜錯的話 要告訴他 比答案大/小
 
+# Refine version 1
+# 每猜一次就告訴 User 目前現在猜第幾次
+
 import random
 
 r = random.randint(1,100)
 #print(r)
-
+count = 0
 user_guess = 0
 while(user_guess != r):
     user_guess = int(input('請猜數字:'))
+    count += 1
     if user_guess > r:
         print('Too Big')
     else:
         print('Too Small')
-
+    print('這是你猜的第', count, '次')
 print('恭喜答對!', '答案就是:', r)        
 
